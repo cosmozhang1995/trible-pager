@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<link rel="shortcut icon" href="img/logo-32.png">
+		<title>TriblePager - A new method of html pager view</title>
+		<link href="demo/lib/flat-ui/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="demo/lib/flat-ui/dist/css/flat-ui.css" rel="stylesheet">
+		<!-- <link href="lib/font-awesome.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="src/css/trible-pager.css"/>
+		<link rel="stylesheet" type="text/css" href="demo/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="demo/lib/jquery.fullPage/jquery.fullPage.css"/>
+		<script type="text/javascript" src="demo/lib/jquery-1.9.0.js"></script>
+	</head>
+	<body>
+		<form id="main-container" class="main-container">
+			<div id="screen-home" class="screen">
+				<div class="container">
+					<div class="row logo-container">
+						<span>
+							<img src="img/logo-bordered-256.png"/>
+						</span>
+					</div>
+					<div class="row site-title">
+						<h1>Trible Pager</h1>
+					</div>
+					<div class="row site-title">
+						<h6>A new method to show a list of pictures in sliding pager view. Come start building your own pager view or just pager it now !</h6>
+					</div>
+					<div class="row home-buttons">
+						<a href="#animation" class="btn btn-info">
+							Start building
+						</a>
+						<a href="javascripti:void(0);" class="btn btn-danger" onclick="showPagerWithoutConfigurations();">
+							Just Pager!
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="screen-animation" class="screen">
+				<div class="container">
+					<h5>Animation</h5>
+					<label>Duration</label>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="slider-anim-duration" class="ui-slider">
+							</div>
+						</div>
+					</div>
+					<label>Easing</label>
+					<div class="row">
+						<div class="col-sm-3 col-xs-6">
+							<label class="radio">
+								<input type="radio" name="anim-easing" id="radio-anim-easing-linear" value="linear" data-toggle="radio">
+								Linear
+							</label>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<label class="radio">
+								<input type="radio" name="anim-easing" id="radio-anim-easing-swing" value="swing" data-toggle="radio" checked>
+								Swing
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="screen-sizing" class="screen">
+				<div class="container">
+					<h5>Sizing</h5>
+					<div class="row">
+						<div class="col-sm-6">
+							<label>Width</label>
+							<div class="row">
+								<div class="col-sm-12">
+									<div id="slider-sizing-width" class="ui-slider">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<label>Height</label>
+							<div class="row">
+								<div class="col-sm-12">
+									<div id="slider-sizing-height" class="ui-slider">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<label>Adjustment</label>
+							<div class="row">
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-proportion" value="proportion" data-toggle="radio" checked>
+										Proportion
+									</label>
+								</div>
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-cut" value="cut" data-toggle="radio">
+										Cut
+									</label>
+								</div>
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-fill" value="fill" data-toggle="radio">
+										Full fill
+									</label>
+								</div>
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-proportionauto" value="proportion|auto" data-toggle="radio">
+										Proportion with auto
+									</label>
+								</div>
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-cutauto" value="cut|auto" data-toggle="radio">
+										Cut with auto
+									</label>
+								</div>
+								<div class="col-lg-2 col-sm-4 col-xs-6">
+									<label class="radio">
+										<input type="radio" name="sizing-adjust" id="radio-sizing-adjust-auto" value="auto" data-toggle="radio">
+										Auto
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="screen-options" class="screen">
+				<div class="container">
+					<h5>Options</h5>
+					<div class="row">
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+							<label class="checkbox" for="checkbox-option-loading-indicator">
+								<input type="checkbox" name="option-loading-indicator" id="checkbox-option-loading-indicator" value="" data-toggle="checkbox">
+								Loading indicator
+							</label>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+							<label class="checkbox" for="checkbox-option-close-button">
+								<input type="checkbox" name="option-close-button" id="checkbox-option-close-button" value="" data-toggle="checkbox" checked="checked">
+								Close button
+							</label>
+						</div>
+						<!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+							<label class="checkbox" for="checkbox-option-immediately">
+								<input type="checkbox" name="option-immediately" id="checkbox-option-immediately" value="" data-toggle="checkbox" checked>
+								Show immediately
+							</label>
+						</div> -->
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+							<label class="checkbox" for="checkbox-option-click-close">
+								<input type="checkbox" name="option-click-close" id="checkbox-option-click-close" value="" data-toggle="checkbox">
+								Click to close
+							</label>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+							<label class="checkbox" for="checkbox-option-paging-region">
+								<input type="checkbox" name="option-paging-region" id="checkbox-option-paging-region" value="" data-toggle="checkbox">
+								Paging region
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="screen-show" class="screen screen-show">
+				<div class="row" style="text-align:center;">
+					<a class="btn btn-very-lg btn-danger" href="javascript:void(0);" onclick="showPager();">
+						Pager!
+					</a>
+				</div>
+			</div>
+		</form>
+	</body>
+	<script src="demo/lib/flat-ui/dist/js/flat-ui.min.js"></script>
+	<script src="demo/lib/flat-ui/js/radiocheck.js"></script>
+	<script type="text/javascript" src="demo/lib/jquery.fullPage/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="src/js/trible-pager.js"></script>
+	<script type="text/javascript" src="demo/js/index.js"></script>
+</html>
