@@ -513,7 +513,7 @@ function TriblePager(list, startIndex, config) {
 		if (src) {
 			img.pagerResize = imgResize;
 			img.onerror = function() {
-				if (this.config.defaultImgSrc) this.src = this.config.defaultImgSrc;
+				if (thisRefer.config.defaultImgSrc) this.src = thisRefer.config.defaultImgSrc;
 				else this.removeAttribute('src');
 			};
 			img.onload = function() {
