@@ -1,86 +1,89 @@
 <h1>
-Trible Pager
+	Trible Pager
 </h1>
 <h2>
-Introduction
+	Introduction
 </h2>
 <p>
-TriblePager is a new method of showing a list of pictures in a slider view. It's main element always has three item elements. One is the current page, one is the previous and one is the next. I invented this for making slider view easier to be responsive.
+	TriblePager is a new method of showing a list of pictures in a slider view. It's main element always has three item elements. One is the current page, one is the previous and one is the next. I invented this for making slider view easier to be responsive.
 </p>
 <p>
-Here are some features:
-<ul>
-<li>
-Update list without update view.
-</li>
-<li>
-Responsive for screen size.
-</li>
-<li>
-Designed for mobile
-</li>
-<li>
-Flexible callbacks.
-</li>
-</ul>
+	Here are some features:
+	<ul>
+		<li>
+			Update list without update view.
+		</li>
+		<li>
+			Responsive for screen size.
+		</li>
+		<li>
+			Designed for mobile
+		</li>
+		<li>
+			Flexible callbacks.
+		</li>
+	</ul>
 </p>
 <p>
-This is my first js widget. And there must be a lot of stains in this. I will be appreciative if you could improve it.
+	This is my first js widget. And there must be a lot of stains in this. I will be appreciative if you could improve it.
+</p>
+<p>
+	<a href="http://cosmozhang1995.github.io/trible-pager/">Click here to view the demo</a>
 </p>
 <h2>
-Dependencies
+	Dependencies
 </h2>
 <p>
-<ul>
-<li>
-jQuery 1.9.0 or later
-</li>
-</ul>
+	<ul>
+		<li>
+			jQuery 1.9.0 or later
+		</li>
+	</ul>
 </p>
 <h2>
-Get start
+	Get start
 </h2>
 <p>
-Include trible-pager.css as a CSS stylesheet. Then you must include jquery.js or jquery.min.js into your html document. With jquery included, include trible-pager.js or trible-pager.min.js.
+	Include trible-pager.css as a CSS stylesheet. Then you must include jquery.js or jquery.min.js into your html document. With jquery included, include trible-pager.js or trible-pager.min.js.
 </p>
 <p>
-Just a single sentence to make a pager view: <code>var pv = new PagerView(list, 0)</code>. <code>list</code> must be an array of which each element object has a property named <code>url</code>. The second argument specifies the index of the picture in <code>list</code> to show when the pager view is initialized.
+	Just a single sentence to make a pager view: <code>var pv = new PagerView(list, 0)</code>. <code>list</code> must be an array of which each element object has a property named <code>url</code>. The second argument specifies the index of the picture in <code>list</code> to show when the pager view is initialized.
 <h2>
-More complex example
+	More complex example
 </h2>
 <p>
-The constructer of TriblePager can has a third argument, named <code>config</code>. It's a JSON object that specifies more complex performances and event callbacks of TriblePager. Here comes a more complex example to show the usage of <code>config</code> argument.
+	The constructer of TriblePager can has a third argument, named <code>config</code>. It's a JSON object that specifies more complex performances and event callbacks of TriblePager. Here comes a more complex example to show the usage of <code>config</code> argument.
 <p>
 <code>
-pagerView = new TriblePager(pictures, 0, {<br/>
-&nbsp;&nbsp;animateDuration: 500,<br/>
-&nbsp;&nbsp;animateEasing: "linear",<br/>
-&nbsp;&nbsp;imageAdjustment: "auto",<br/>
-&nbsp;&nbsp;pageSize: {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;width: "50%",<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;height: "50%"<br/>
-&nbsp;&nbsp;},<br/>
-&nbsp;&nbsp;loadingIndicator: "&lt;i class=\"fa fa-spinner\"&gt;&lt;/i&gt;",<br/>
-&nbsp;&nbsp;closeButton: "&lt;i class=\"fa fa-spinner\">&lt;/i&gt;,<br/>
-&nbsp;&nbsp;clickListener: function(event,pagerview){<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;pagerview.destroy();<br/>
-&nbsp;&nbsp;},<br/>
-&nbsp;&nbsp;pagingRegion: "50%",<br/>
-&nbsp;&nbsp;sensitivity: 0.3<br/>
-});
+	pagerView = new TriblePager(pictures, 0, {<br/>
+	&nbsp;&nbsp;animateDuration: 500,<br/>
+	&nbsp;&nbsp;animateEasing: "linear",<br/>
+	&nbsp;&nbsp;imageAdjustment: "auto",<br/>
+	&nbsp;&nbsp;pageSize: {<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;width: "50%",<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;height: "50%"<br/>
+	&nbsp;&nbsp;},<br/>
+	&nbsp;&nbsp;loadingIndicator: "&lt;i class=\"fa fa-spinner\"&gt;&lt;/i&gt;",<br/>
+	&nbsp;&nbsp;closeButton: "&lt;i class=\"fa fa-spinner\">&lt;/i&gt;,<br/>
+	&nbsp;&nbsp;clickListener: function(event,pagerview){<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;pagerview.destroy();<br/>
+	&nbsp;&nbsp;},<br/>
+	&nbsp;&nbsp;pagingRegion: "50%",<br/>
+	&nbsp;&nbsp;sensitivity: 0.3<br/>
+	});
 </code>
 </p>
 <p>
-This example create a pager view with some specified configurations. You can try it by yourself. As I think many of them are very easy to understand.
+	This example create a pager view with some specified configurations. You can try it by yourself. As I think many of them are very easy to understand.
 </p>
 <p>
-I will show you all available configurations in the next chapter.
+	I will show you all available configurations in the next chapter.
 </p>
 <h2>
-Configuration fields
+	Configuration fields
 </h2>
 <p>
-This table shows all available configuration fields of the <code>config</code> argument.
+	This table shows all available configuration fields of the <code>config</code> argument.
 </p>
 <p>
 <table>
