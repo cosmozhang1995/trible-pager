@@ -514,7 +514,10 @@ function TriblePager(list, startIndex, config) {
 			img.pagerResize = imgResize;
 			img.onerror = function() {
 				if (thisRefer.config.defaultImgSrc) this.src = thisRefer.config.defaultImgSrc;
-				else this.removeAttribute('src');
+				else {
+					this.removeAttribute('src');
+					$(this).hide();
+				}
 			};
 			img.onload = function() {
 				if (typeof this.pagerResize === "function") this.pagerResize();
