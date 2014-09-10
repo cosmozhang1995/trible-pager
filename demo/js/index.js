@@ -35,13 +35,13 @@ $(document).ready(function() {
 
 var pictures = [
 	{
-		url: "http://gamemoir.files.wordpress.com/2014/04/assassins-creed.jpg"
-	},
-	{
 		url: "http://pic1.ipadown.com/imgs/201103261233162581.jpg"
 	},
 	{
 		url: "http://img.6niu.com/allimg/1206/2-1206201A531448.jpg"
+	},
+	{
+		url: "http://gamemoir.files.wordpress.com/2014/04/assassins-creed.jpg"
 	},
 	{
 		url: "http://pic2.52pk.com/files/120217/801441_111159_4188.jpg"
